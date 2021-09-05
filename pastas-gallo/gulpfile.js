@@ -52,10 +52,7 @@ function scripts() {
 }
 
 function styles() {
-    return src([
-            'node_modules/bootstrap/scss/bootstrap.scss',
-            'app/scss/style.scss'
-        ])
+    return src('app/scss/style.scss')
         .pipe(scss({ outputStyle: 'compressed' }))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
