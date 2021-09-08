@@ -17,7 +17,7 @@ $(document).ready(function() {
         easing: 'ease',
         speed: 2000,
         autoplay: false,
-        pauseOnHover: true,
+        pauseOnDotsHover: true,
         pauseOnFocus: false,
         pauseOnHover: false,
         touchThreshold: 5,
@@ -31,25 +31,31 @@ $(document).ready(function() {
     $('.product-slider').on('afterChange', function(event, slick, currentSlide) {
         if (currentSlide == 19) {
             $('.product-slider').slick('slickGoTo', 0);
-
-            // currentSlide = 0;
-            // $('.product-slider').slick('setOption', 'slidesToScroll', 1, true);
-            // $('.product-slider').slick('slickPlay')
-            // $('.product-slider').slick('slickNext');
         }
-        // if (currentSlide == 0) {
-        //     $('.product-slider').slick('setOption', 'autoplay', false, false);
-        //     $('.product-slider').slick('setOption', 'initialSlide', 0, true);
-        //     $('.product-slider').slick('setOption', 'autoplay', true, true);
-
-        // }
-
-        // $('.product-slider').slick('slickNext');
-        // if ($('.product-slider').slick('slickPause')) {
-        //     $('.product-slider').slick('slickPlay')
-        //         // $('.product-slider').slick('setOption', 'autoplay', true, true);
-
-        // }
     })
 
+    $('.bottom-slider').slick({
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 3,
+        dots: true,
+        easing: 'ease',
+        speed: 300,
+        // autoplay: true,
+        pauseOnDotsHover: true,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        touchThreshold: 5,
+        autoplaySpeed: 2000,
+        waitForAnimate: false,
+        variableWidth: true,
+        responsive: [{
+            breakpoint: 1023,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: false
+            }
+        }]
+    })
 })
