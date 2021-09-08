@@ -8,19 +8,20 @@ $(document).ready(function() {
         touchThreshold: 3
     });
 
+    //включить autoplay
     $('.product-slider').slick({
         infinite: false,
         centerMode: true,
         slidesToShow: 3,
         dots: true,
         easing: 'ease',
-        speed: 500,
+        speed: 2000,
         autoplay: false,
         pauseOnHover: true,
         pauseOnFocus: false,
         pauseOnHover: false,
         touchThreshold: 5,
-        autoplaySpeed: 500, //2000
+        autoplaySpeed: 2000,
         waitForAnimate: false,
         variableWidth: true,
         initialSlide: 8
@@ -30,11 +31,11 @@ $(document).ready(function() {
     $('.product-slider').on('afterChange', function(event, slick, currentSlide) {
         if (currentSlide == 19) {
             $('.product-slider').slick('slickGoTo', 0);
-            currentSlide = 0;
-            // $('.product-slider').slick('setOption', 'initialSlide', 0, true);
+
+            // currentSlide = 0;
+            // $('.product-slider').slick('setOption', 'slidesToScroll', 1, true);
             // $('.product-slider').slick('slickPlay')
-            $('.product-slider').slick('slickNext');
-            console.log('Осуществлён переход к' + currentSlide + ' слайду');
+            // $('.product-slider').slick('slickNext');
         }
         // if (currentSlide == 0) {
         //     $('.product-slider').slick('setOption', 'autoplay', false, false);

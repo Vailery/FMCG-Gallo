@@ -17,19 +17,26 @@
 
 <body>
     <!-- Header -->
-    <header>
-        <nav class="navbar fixed-top navbar-expand-lg">
-            <div class="container-xxl">
+    <!-- <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+            <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                  </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse left-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Product</a>
+                        <li class="nav-item dropdown first-drop">
+                            <a class="nav-link" href="#" id="navbarDropdown">Product</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Pasta</a></li>
+                                <li>
+                                    <a class="nav-link dropdown-toggle first-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Pasta</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Dry Pasta</a></li>
+                                        <li><a class="dropdown-item" href="#">Fresh Pasta</a></li>
+
+                                    </ul>
+                                </li>
                                 <li><a class="dropdown-item" href="#">Sauce</a></li>
                                 <li><a class="dropdown-item" href="#">Flour</a></li>
                                 <li><a class="dropdown-item" href="#">Breadcrumbs</a></li>
@@ -39,13 +46,15 @@
                             <a class="nav-link" href="#">Chef Gallo</a>
                         </li>
                     </ul>
+                </div>
 
-                    <div class="red-square">
-                        <a class="navbar-brand" href="#">
-                            <img src="./images/img/logo.png" alt="logo" width="120" height="auto">
-                        </a>
-                    </div>
+                <div class="red-square">
+                    <a class="navbar-brand" href="#">
+                        <img src="./images/img/logo.png" alt="logo" width="120" height="auto">
+                    </a>
+                </div>
 
+                <div class="collapse navbar-collapse right-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Nutrition & tips</a>
@@ -54,18 +63,23 @@
                             <a class="nav-link" href="#">Gallo Quality</a>
                         </li>
                     </ul>
-                    <!-- <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form> -->
+
+                    <div class="search-menu d-flex">
+                        <form class="d-flex search-form">
+                            <button class="btn" type="submit"><img src="./images/img/btn-buscar-blanco.png" alt="search"></button>
+                            <input class="form-control search-input" type="search" placeholder="Search..." aria-label="Search">
+                        </form>
+                    </div>
                 </div>
+
+            </div>
             </div>
         </nav>
-    </header>
+    </header> -->
 
     <main>
         <!-- Top slider -->
-        <section class="top-carousel">
+        <!-- <section class="top-carousel">
             <div class="container-fluid">
                 <div class="slider top-slider">
                     <div class="slider__item d-flex item-1">
@@ -79,10 +93,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Product slider -->
-        <section class="product-carousel">
+        <!-- <section class="product-carousel">
             <div class="container-fluid">
                 <h3>Our</h3>
                 <h2>Products</h2>
@@ -247,11 +261,75 @@
                             <a href="#" class="btn">View Range</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section> -->
 
+        <!-- Meal section -->
+        <section class="meal">
+            <div class="container">
+                <div class="meal__info">
+                    <div class="meal__info__text">
+                        <div class="meal__smoke">
+                            <span style="--i:1;"></span>
+                            <span style="--i:3;"></span>
+                            <span style="--i:16;"></span>
+                            <span style="--i:5;"></span>
+                            <span style="--i:13;"></span>
+                            <span style="--i:20;"></span>
+                            <span style="--i:6;"></span>
+                            <span style="--i:7;"></span>
+                            <span style="--i:10;"></span>
+                            <span style="--i:8;"></span>
+                            <span style="--i:17;"></span>
+                            <span style="--i:11;"></span>
+                            <span style="--i:18;"></span>
+                            <span style="--i:12;"></span>
+                            <span style="--i:14;"></span>
+                            <span style="--i:2;"></span>
+                            <span style="--i:9;"></span>
+                            <span style="--i:15;"></span>
+                            <span style="--i:4;"></span>
+                            <span style="--i:19;"></span>
+                        </div>
+                        <h3>Chef Gallo</h3>
+                        <h2>Today,</h2>
+                        <p>Fresh pasta boletus, shitake and mozzarella</p>
+                        <a href="#">See Recipe</a>
+                    </div>
+
+                    <div class="meal__info__img">
+                        <a href="#"><img src="./images/product/pasta-fresca-boletus-shitake-mozzarella.jpg" alt="meal"></a>
+                    </div>
                 </div>
             </div>
         </section>
-
+        <!-- Quality section -->
+        <section class="quality">
+            <div class="container-fluid">
+                <div class="quality-info">
+                    <div class="info">
+                        <div class="info__image">
+                            <img src="./images/img/home_espiga.png" alt="ear">
+                        </div>
+                        <div class="info__text">
+                            <h3>Quality</h3>
+                            <h2>Gallo</h2>
+                            <p>Since its inception, in the forties, Gallo's is a story of innovation and pursuit of excellence.</p>
+                            <a href="#">learn more</a>
+                        </div>
+                    </div>
+                    <div class="picture">
+                        <div class="picture__info">
+                            <div class="picture__info__content">
+                                <p>Pasta made our way, a product of our time and for everyone</p>
+                                <a href="#">learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -277,74 +355,84 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-xl-2 pe-xl-4">
-                    <h4>Sauce</h4>
-                    <div class="footer__info__menu">
-                        <ul>
-                            <li><a href="#">Bolognese Sauce</a></li>
-                            <li><a href="#">Carbonara Sauce</a></li>
-                            <li><a href="#">Pesto sauce</a></li>
-                            <li><a href="#">Parmesan and pear sauce</a></li>
-                            <li><a href="#">Forest mushroom sauce</a></li>
-                            <li><a href="#">Truffle sauce</a></li>
-                            <li><a href="#">Red Pesto</a></li>
-                            <li><a href="#">Neapolitan Sauce</a></li>
-                            <li><a href="#">Sicilian Sauce</a></li>
-                            <li><a href="#">Soy Bolognese sauce</a></li>
-                        </ul>
+                <div class="col-12 col-xl-2 pe-xl-4 links">
+                    <div>
+                        <h4>Sauce</h4>
+                        <div class="footer__info__menu">
+                            <ul>
+                                <li><a href="#">Bolognese Sauce</a></li>
+                                <li><a href="#">Carbonara Sauce</a></li>
+                                <li><a href="#">Pesto sauce</a></li>
+                                <li><a href="#">Parmesan and pear sauce</a></li>
+                                <li><a href="#">Forest mushroom sauce</a></li>
+                                <li><a href="#">Truffle sauce</a></li>
+                                <li><a href="#">Red Pesto</a></li>
+                                <li><a href="#">Neapolitan Sauce</a></li>
+                                <li><a href="#">Sicilian Sauce</a></li>
+                                <li><a href="#">Soy Bolognese sauce</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-xl-2 pe-xl-4">
-                    <h4>Fresh Pasta</h4>
-                    <div class="footer__info__menu">
-                        <ul>
-                            <li><a href="#">Pasta stuffed with Roasted Chicken</a></li>
-                            <li><a href="#">Pasta stuffed with goat cheese and caramelized onion</a></li>
-                            <li><a href="#">Pasta rellena de Foie y Manzana</a></li>
-                            <li><a href="#">Pasta stuffed with Galician beef</a></li>
-                            <li><a href="#">Manchego cheese stuffed pasta</a></li>
-                            <li><a href="#">Pasta stuffed with ham</a></li>
-                            <li><a href="#">Potato stuffed gnocchi</a></li>
-                            <li><a href="#">Gluten-free fresh pasta</a></li>
-                            <li><a href="#">Vegan pasta</a></li>
-                        </ul>
+                <div class="col-12 col-xl-2 pe-xl-4 links">
+                    <div>
+                        <h4>Fresh Pasta</h4>
+                        <div class="footer__info__menu">
+                            <ul>
+                                <li><a href="#">Pasta stuffed with Roasted Chicken</a></li>
+                                <li><a href="#">Pasta stuffed with goat cheese and caramelized onion</a></li>
+                                <li><a href="#">Pasta rellena de Foie y Manzana</a></li>
+                                <li><a href="#">Pasta stuffed with Galician beef</a></li>
+                                <li><a href="#">Manchego cheese stuffed pasta</a></li>
+                                <li><a href="#">Pasta stuffed with ham</a></li>
+                                <li><a href="#">Potato stuffed gnocchi</a></li>
+                                <li><a href="#">Gluten-free fresh pasta</a></li>
+                                <li><a href="#">Vegan pasta</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-xl-2 pe-xl-4">
-                    <h4>Cuisine</h4>
-                    <div class="footer__info__menu">
-                        <ul>
-                            <li><a href="#">Gluten-free spaghetti with garlic cod and lemon</a></li>
-                            <li><a href="#">Valencian Fideuá</a></li>
-                            <li><a href="#">Spaghetti with clams, with clams</a></li>
-                            <li><a href="#">Pasta a la amatriciana</a></li>
-                            <li><a href="#">Noodles with rabbit and prawns</a></li>
-                            <li><a href="#">Pasta salad with salmon</a></li>
-                            <li><a href="#">Spaghetti bolognese</a></li>
-                            <li><a href="#">Pasta with carbonara sauce</a></li>
-                        </ul>
+                <div class="col-12 col-xl-2 pe-xl-4 links">
+                    <div>
+                        <h4>Cuisine</h4>
+                        <div class="footer__info__menu">
+                            <ul>
+                                <li><a href="#">Gluten-free spaghetti with garlic cod and lemon</a></li>
+                                <li><a href="#">Valencian Fideuá</a></li>
+                                <li><a href="#">Spaghetti with clams, with clams</a></li>
+                                <li><a href="#">Pasta a la amatriciana</a></li>
+                                <li><a href="#">Noodles with rabbit and prawns</a></li>
+                                <li><a href="#">Pasta salad with salmon</a></li>
+                                <li><a href="#">Spaghetti bolognese</a></li>
+                                <li><a href="#">Pasta with carbonara sauce</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-xl-2 pe-xl-4">
-                    <h4>Contact</h4>
-                    <div class="footer__info__menu">
-                        <ul>
-                            <li><a href="tel:900535465" class="phone">900 535 465</a></li>
-                            <li><a href="#">Get in touch with us</a></li>
-                            <li><a href="#">Work with Us</a></li>
-                        </ul>
+                <div class="col-12 col-xl-2 pe-xl-4 links">
+                    <div>
+                        <h4>Contact</h4>
+                        <div class="footer__info__menu">
+                            <ul>
+                                <li><a href="tel:900535465" class="phone">900 535 465</a></li>
+                                <li><a href="#">Get in touch with us</a></li>
+                                <li><a href="#">Work with Us</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-xl-2 pe-xl-4">
-                    <h4>Follow Us</h4>
-                    <div class="footer__info__menu__social d-flex">
-                        <a href="https://www.instagram.com/"><img src="./images/svg/instagram-brands.svg" alt="instagram"></a>
-                        <a href="https://www.facebook.com/"><img src="./images/svg/facebook-brands.svg" alt="facebook"></a>
-                        <a href="https://www.youtube.com/"><img src="./images/svg/youtube-brands.svg" alt="youtube"></a>
+                <div class="col-12 col-xl-2 p-0 links">
+                    <div>
+                        <h4>Follow Us</h4>
+                        <div class="footer__info__menu__social d-flex">
+                            <a target="_blank" href="https://www.instagram.com/"><img src="./images/svg/instagram-brands.svg" alt="instagram"></a>
+                            <a target="_blank" href="https://www.facebook.com/"><img src="./images/svg/facebook-brands.svg" alt="facebook"></a>
+                            <a target="_blank" href="https://www.youtube.com/"><img src="./images/svg/youtube-brands.svg" alt="youtube"></a>
+                        </div>
                     </div>
                 </div>
             </div>
