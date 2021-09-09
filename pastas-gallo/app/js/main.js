@@ -1,22 +1,21 @@
 $(document).ready(function() {
     $('.top-slider').slick({
+        // autoplay: true,
         arrows: false,
         dots: true,
         easing: 'ease',
-        autoplay: false,
         pauseOnDotsHover: true,
         touchThreshold: 3
     });
 
-    //включить autoplay
     $('.product-slider').slick({
+        // autoplay: true,
         infinite: false,
         centerMode: true,
         slidesToShow: 3,
         dots: true,
         easing: 'ease',
         speed: 2000,
-        autoplay: false,
         pauseOnDotsHover: true,
         pauseOnFocus: false,
         pauseOnHover: false,
@@ -24,8 +23,13 @@ $(document).ready(function() {
         autoplaySpeed: 2000,
         waitForAnimate: false,
         variableWidth: true,
-        initialSlide: 8
-            //убрать стрелочки на 1023
+        initialSlide: 8,
+        responsive: [{
+            breakpoint: 1023,
+            settings: {
+                arrows: false
+            }
+        }]
     })
 
     $('.product-slider').on('afterChange', function(event, slick, currentSlide) {
@@ -35,13 +39,13 @@ $(document).ready(function() {
     })
 
     $('.bottom-slider').slick({
+        // autoplay: true,
         infinite: true,
         centerMode: true,
         slidesToShow: 3,
         dots: true,
         easing: 'ease',
         speed: 300,
-        // autoplay: true,
         pauseOnDotsHover: true,
         pauseOnFocus: false,
         pauseOnHover: false,
