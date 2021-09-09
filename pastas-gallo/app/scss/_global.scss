@@ -28,3 +28,7 @@ footer {
 .container-fluid {
     padding: 0;
 }
+
+.dropdown-menu::-webkit-scrollbar {
+    width: 1px;
+}

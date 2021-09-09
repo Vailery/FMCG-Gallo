@@ -1,6 +1,41 @@
 $(document).ready(function() {
+
+    // document
+    // search input
+    $('#search-button').click(function() {
+        if ($('.search-input').css('display') == 'none') {
+            $('.search-input')
+                .animate({ width: 'show' }, 500)
+                .focus()
+        } else {
+            $('.search-input')
+                .animate({ width: 'hide' }, 500);
+        }
+    });
+
+    // scroll
+    $(window).on("scroll", function() {
+        var scrolled = $(this).scrollTop();
+        if (scrolled > 1) {
+            $('.navbar').addClass('navbar-small white-menu')
+        }
+        if (scrolled <= 1) {
+            $('.navbar').removeClass('navbar-small white-menu');
+        }
+    });
+
+    // dropdown
+    $(document).ready(function() {
+        $('.dropdown-menu a.first-item').on("click", function(e) {
+            $(this).next('ul').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+    });
+
+    // top slider
     $('.top-slider').slick({
-        // autoplay: true,
+        autoplay: true,
         arrows: false,
         dots: true,
         easing: 'ease',
@@ -8,8 +43,9 @@ $(document).ready(function() {
         touchThreshold: 3
     });
 
+    // product slider
     $('.product-slider').slick({
-        // autoplay: true,
+        autoplay: true,
         infinite: false,
         centerMode: true,
         slidesToShow: 3,
@@ -32,14 +68,16 @@ $(document).ready(function() {
         }]
     })
 
-    $('.product-slider').on('afterChange', function(event, slick, currentSlide) {
-        if (currentSlide == 19) {
-            $('.product-slider').slick('slickGoTo', 0);
-        }
-    })
+    // for product slider
+    // $('.product-slider').on('afterChange', function(event, slick, currentSlide) {
+    //     if (currentSlide == 19) {
+    //         $('.product-slider').slick('slickGoTo', 0);
+    //     }
+    // })
 
+    // bottom slider
     $('.bottom-slider').slick({
-        // autoplay: true,
+        autoplay: true,
         infinite: true,
         centerMode: true,
         slidesToShow: 3,
