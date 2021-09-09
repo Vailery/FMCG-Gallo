@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     // document
     // search input
-    $('#search-button').click(function() {
+    $('#search-button').on("click", function() {
         if ($('.search-input').css('display') == 'none') {
             $('.search-input')
                 .animate({ width: 'show' }, 500)
@@ -25,12 +25,10 @@ $(document).ready(function() {
     });
 
     // dropdown
-    $(document).ready(function() {
-        $('.dropdown-menu a.first-item').on("click", function(e) {
-            $(this).next('ul').toggle();
-            e.stopPropagation();
-            e.preventDefault();
-        });
+    $('.dropdown-menu a.first-item').on("click", function(e) {
+        $(this).next('ul').toggle();
+        e.stopPropagation();
+        e.preventDefault();
     });
 
     // top slider
@@ -59,7 +57,7 @@ $(document).ready(function() {
         autoplaySpeed: 2000,
         waitForAnimate: false,
         variableWidth: true,
-        initialSlide: 8,
+        initialSlide: 18,
         responsive: [{
             breakpoint: 1023,
             settings: {
@@ -69,11 +67,15 @@ $(document).ready(function() {
     })
 
     // for product slider
-    // $('.product-slider').on('afterChange', function(event, slick, currentSlide) {
-    //     if (currentSlide == 19) {
-    //         $('.product-slider').slick('slickGoTo', 0);
-    //     }
-    // })
+    $('.product-slider').on('afterChange', function(event, slick, currentSlide) {
+        if (currentSlide == 19) {
+            $('.product-slider').slick('slickGoTo', 0)
+                .slick('slickSetOption', {
+                    initialSlide: 0,
+                    autoplay: true
+                }, true);
+        }
+    })
 
     // bottom slider
     $('.bottom-slider').slick({
@@ -101,3 +103,31 @@ $(document).ready(function() {
         }]
     })
 })
+
+// scroll reveal animation
+const sr = ScrollReveal({
+    distance: '60px',
+    duration: 2800
+})
+
+// sr.reveal(`.home__data, .home__social-link, .home__info, 
+//            .discover__container, 
+//            .experience__data, .experience__overlay,
+//            .place__card,
+//            .sponsor__content,
+//            .footer__data, .footer__rights`, {
+//     origin: 'top',
+//     interval: 100,
+// })
+
+// sr.reveal(`.title`, {
+//     origin: 'right',
+//     interval: 100,
+// })
+
+// sr.reveal(`.about__img-overlay, 
+//            .video__content,
+//            .subscribe__form`, {
+//     origin: 'right',
+//     interval: 100,
+// })
