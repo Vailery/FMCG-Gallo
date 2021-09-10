@@ -7,13 +7,14 @@
 .header {
     .navbar {
         padding-top: 0;
+        transition: all .5s ease;
         .navbar-toggler {
             width: 32px;
             height: 32px;
             position: absolute;
             top: 15px;
             left: 15px;
-            background-color: #e1302b;
+            background-color: $red;
             border: none;
             flex-direction: column;
             justify-content: center;
@@ -30,7 +31,7 @@
                 transition: transform .5s ease-in-out;
                 width: 18px;
                 height: 2px;
-                background-color: #fff;
+                background-color: $white;
             }
             .line-one-toggle {
                 position: absolute;
@@ -53,7 +54,7 @@
         width: 100%;
         height: 100%;
         top: 0;
-        background-color: #fff;
+        background-color: $white;
         position: absolute;
         z-index: -1;
         transition: .4s ease-in-out;
@@ -63,8 +64,10 @@
         padding-right: 45px;
         flex: 1;
         flex-basis: 0;
+        transition: all .5s ease;
         .navbar-nav {
             padding-right: 50px;
+            transition: all .5s ease;
             .nav-item:last-child {
                 margin-left: 50px;
             }
@@ -76,8 +79,10 @@
         padding-left: 40px;
         flex: 1;
         flex-basis: 0;
+        transition: all .5s ease;
         .nav-item {
             margin-right: 50px;
+            transition: all .5s ease;
         }
     }
     .search-menu {
@@ -105,11 +110,11 @@
                 padding: 0;
                 margin: 0;
                 outline: 0;
-                color: var(--bs-white);
+                color: $white;
                 border-radius: 0;
                 box-shadow: none;
                 &::placeholder {
-                    color: var(--bs-white);
+                    color: $white;
                 }
             }
         }
@@ -125,11 +130,11 @@
                 text-transform: uppercase;
                 font-weight: 900;
                 font-size: 13px;
-                color: var(--bs-white);
+                color: $white;
                 &:hover,
                 &:active,
                 &:focus {
-                    color: var(--bs-white);
+                    color: $white;
                 }
             }
             &:first-child {
@@ -151,7 +156,7 @@
                     border: none;
                     width: 10px;
                     height: 2px;
-                    background-color: #e1302b;
+                    background-color: $red;
                     transform: rotate(450deg);
                     transition: transform .5s ease-in-out;
                 }
@@ -175,7 +180,7 @@
                     top: 45%;
                     width: 10px;
                     height: 2px;
-                    background-color: #e1302b;
+                    background-color: $red;
                     transform: rotate(0);
                     transition: transform .5s ease-in-out;
                 }
@@ -212,10 +217,10 @@
                 .dropdown-item:hover,
                 .dropdown-item:focus {
                     background-color: transparent;
-                    color: #000000;
+                    color: $black;
                 }
                 .first-item {
-                    color: #000000;
+                    color: $black;
                 }
             }
             .dropdown-second {
@@ -251,20 +256,23 @@
     .red-square {
         display: flex;
         justify-content: center;
-        background-color: #e1302b;
+        background-color: $red;
         width: 201px;
         height: 110px;
         margin: 0 auto;
+        transition: all .5s ease;
         .navbar-brand {
             position: relative;
             width: 120px;
             height: 120px;
             margin-right: 0;
+            transition: all .5s ease;
             img {
                 position: absolute;
                 top: 50px;
                 width: 100%;
                 height: auto;
+                transition: all .5s ease;
             }
         }
     }
@@ -276,11 +284,11 @@
         max-height: 50px;
         .navbar-nav {
             .nav-link {
-                color: #000000;
+                color: $black;
                 &:hover,
                 &:active,
                 &:focus {
-                    color: #000000;
+                    color: $black;
                 }
             }
         }
@@ -296,10 +304,10 @@
                 }
             }
             .search-input {
-                border-bottom: 1px solid #e1302b;
-                color: #000;
+                border-bottom: 1px solid $red;
+                color: $black;
                 &::placeholder {
-                    color: #000;
+                    color: $black;
                 }
             }
         }
@@ -359,7 +367,7 @@
         }
         .burger-menu {
             height: 100vh;
-            background: #fff;
+            background: $white;
             padding: 120px 50px;
             transition: all .5 ease;
             .container-fluid {
@@ -394,7 +402,8 @@
                     width: 100vw;
                     margin-top: 0;
                     padding-left: 50px;
-                    transform: translateX(-100%);
+                    transform: translateX(100%);
+                    transition: all .5s ease;
                 }
                 .go-back {
                     &::before {
@@ -419,12 +428,12 @@
                     margin-bottom: 15px;
                     .nav-link {
                         position: relative;
-                        color: #000;
+                        color: $black;
                         font-size: 20px;
                         padding: 7px 0;
                     }
                     .red-block {
-                        color: #000;
+                        color: $black;
                         font-size: 20px;
                         padding: 7px 0;
                         &::after {
@@ -436,7 +445,7 @@
                             width: 25px;
                             height: 25px;
                             margin-left: 0;
-                            background-color: #e1302b;
+                            background-color: $red;
                             z-index: -1;
                         }
                     }
@@ -503,15 +512,15 @@
                     }
                 }
                 .search-input {
-                    border-bottom: 1px solid #e1302b;
-                    color: #000;
+                    border-bottom: 1px solid $red;
+                    color: $black;
                     display: block;
                     position: absolute;
                     right: 150%;
                     top: 100%;
                     transform: translateY(200%);
                     &::placeholder {
-                        color: #000;
+                        color: $black;
                     }
                 }
             }
@@ -691,13 +700,11 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-image: url('../images/img/fondo_detalleproducto_desktop.jpg');
+    transition: all .5s ease;
     h3 {
-        font-family: Karma, sans-serif;
-        font-size: 30px;
-        font-weight: 500;
-        line-height: 1;
         margin-bottom: 10px;
-        color: #e1302b;
+        transition: all .5s ease;
+        @extend %karmafont;
     }
     h2 {
         margin-bottom: 40px;
@@ -705,6 +712,7 @@
         font-size: 60px;
         font-weight: 900;
         line-height: .8;
+        transition: all .5s ease;
     }
     .product-slider {
         position: relative;
@@ -744,7 +752,7 @@
                             font-weight: 900;
                             padding: 5px 15px;
                             color: var(--bs-white);
-                            background-color: #e1302b;
+                            background-color: $red;
                             text-transform: uppercase;
                             border-radius: 0;
                             border: 0;
@@ -768,7 +776,7 @@
         .slick-dots {
             transform: translate(-50%, -30px);
             button {
-                background-color: #e1302b;
+                background-color: $red;
             }
         }
     }
@@ -814,8 +822,9 @@
 
 // meal section
 .meal {
-    background-color: #000;
+    background-color: $black;
     padding: 80px 0;
+    transition: all .5s ease;
     .container {
         max-width: 840px;
         margin: auto;
@@ -836,7 +845,7 @@
             margin: 0 2px 50px;
             min-width: 8px;
             height: 120px;
-            background: #fff;
+            background: $white;
             border-radius: 50%;
             animation: fog 5s linear infinite;
             opacity: 0;
@@ -851,31 +860,31 @@
             align-items: center;
             flex-direction: column;
             position: relative;
+            transition: all .5s ease;
             h3 {
-                font-family: Karma, sans-serif;
-                font-size: 30px;
-                font-weight: 500;
-                line-height: 1;
-                color: #e1302b;
-                margin-bottom: 10px;
                 max-width: 390px;
+                margin-bottom: 10px;
+                transition: all .5s ease;
+                @extend %karmafont;
             }
             h2 {
                 font-size: 80px;
                 font-weight: 900;
                 line-height: 1;
-                color: #fff;
+                color: $white;
                 margin-bottom: 15px;
                 max-width: 390px;
+                transition: all .5s ease;
             }
             p {
                 font-size: 30px;
                 font-weight: 400;
                 line-height: 1;
-                color: #fff;
+                color: $white;
                 text-transform: uppercase;
                 margin-bottom: 40px;
                 max-width: 390px;
+                transition: all .5s ease;
             }
             a {
                 z-index: 1;
@@ -883,8 +892,8 @@
                 font-size: 16px;
                 font-weight: 900;
                 padding: 5px 15px;
-                color: #fff;
-                background-color: #e1302b;
+                color: $white;
+                background-color: $red;
                 text-transform: uppercase;
                 transition: .2s ease-in-out;
                 display: block;
@@ -895,11 +904,13 @@
             width: 100%;
             height: 360px;
             position: relative;
+            transition: all .5s ease;
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 object-position: center;
+                transition: all .5s ease;
             }
         }
     }
@@ -967,16 +978,12 @@
     padding: 60px 0 95px;
     max-width: 1040px;
     h3 {
-        font-family: Karma, sans-serif;
-        font-weight: 500;
-        line-height: 1;
-        color: #e1302b;
-        font-size: 30px;
+        @extend %karmafont;
     }
     h2 {
         font-weight: 900;
         line-height: .8;
-        color: #000;
+        color: $black;
         max-width: 530px;
         margin: 0 auto 30px;
         text-transform: uppercase;
@@ -985,7 +992,7 @@
     a {
         font-size: 16px;
         font-weight: 900;
-        color: #e1302b;
+        color: $red;
         text-transform: uppercase;
         margin: auto auto 34px;
         display: block;
@@ -993,7 +1000,7 @@
             margin-left: 5px;
             font-size: 16px;
             font-weight: 900;
-            color: #e1302b;
+            color: $red;
         }
     }
     .bottom-slider {
@@ -1034,8 +1041,8 @@
                         justify-content: center;
                         align-items: center;
                         padding: 5px 15px;
-                        color: #fff;
-                        background-color: #e1302b;
+                        color: $white;
+                        background-color: $red;
                         text-transform: uppercase;
                         transition: .2s ease-in-out;
                         display: block;
@@ -1057,7 +1064,7 @@
                     span {
                         font-size: 12px;
                         font-weight: 900;
-                        color: #e1302b;
+                        color: $red;
                         text-transform: uppercase;
                         img {
                             max-width: 18px;
@@ -1080,19 +1087,16 @@
                 }
             }
         }
-        .slick-arrow {
-            top: 53%;
-        }
         .slick-prev {
-            left: 0%;
+            left: -10%;
         }
         .slick-next {
-            right: 0%;
+            right: -10%;
         }
         .slick-dots {
             transform: translate(-50%, -20px);
             button {
-                background-color: #e1302b;
+                background-color: $red;
             }
         }
     }
@@ -1120,6 +1124,9 @@
                         padding-bottom: 0;
                     }
                 }
+            }
+            .slick-arrow {
+                display: none;
             }
         }
     }
@@ -1161,26 +1168,22 @@
             padding: 80px 0;
             z-index: 1;
             h3 {
-                font-family: Karma, sans-serif;
-                font-size: 30px;
-                font-weight: 500;
-                line-height: 1;
-                color: #e1302b;
                 text-align: left;
+                @extend %karmafont;
             }
             h2 {
                 text-transform: uppercase;
                 font-size: 60px;
                 font-weight: 900;
                 line-height: .8;
-                color: #000;
+                color: $black;
                 margin-bottom: 25px;
                 text-align: left;
             }
             p {
                 font-weight: 400;
                 line-height: 1.22;
-                color: #000;
+                color: $black;
                 margin-bottom: 25px;
                 text-align: left;
                 font-size: 24px;
@@ -1192,8 +1195,8 @@
                 justify-content: center;
                 align-items: center;
                 padding: 5px 15px;
-                color: #fff;
-                background-color: #e1302b;
+                color: $white;
+                background-color: $red;
                 text-transform: uppercase;
                 transition: .2s ease-in-out;
                 display: block;
@@ -1221,7 +1224,7 @@
                 width: 300px;
                 max-width: 300px;
                 height: 300px;
-                background-color: #e1302b;
+                background-color: $red;
                 text-transform: uppercase;
                 display: flex;
                 justify-content: center;
@@ -1231,7 +1234,7 @@
                     font-size: 24px;
                     font-weight: 900;
                     line-height: .83;
-                    color: #fff;
+                    color: $white;
                     margin: 0;
                     padding: 0;
                     max-width: 195px;
@@ -1243,8 +1246,8 @@
                     justify-content: center;
                     align-items: center;
                     padding: 5px 15px;
-                    background-color: #000;
-                    color: #fff;
+                    background-color: $black;
+                    color: $white;
                     position: absolute;
                     bottom: -15px;
                     display: none;
@@ -1323,10 +1326,10 @@
 .footer {
     position: relative;
     padding: 50px 0 110px;
-    background-color: #181818;
+    background-color: $dark-blue;
     &__info {
         margin: 0 auto 85px;
-        color: #e1302b;
+        color: $red;
         text-align: left;
         .links {
             display: flex;
@@ -1350,14 +1353,14 @@
                     font-size: 11px;
                     font-weight: 900;
                     letter-spacing: 1px;
-                    color: #948274;
+                    color: $gray;
                     margin-bottom: 10px;
                     text-transform: uppercase;
                     &.phone {
                         font-size: 20px;
                         font-weight: 700;
                         letter-spacing: 1.82px;
-                        color: #fff;
+                        color: $white;
                         margin-top: -5px;
                     }
                 }

@@ -52,7 +52,7 @@ $(document).ready(function() {
     });
 
     $('.go-back').on("click", function() {
-        $('.first-drop>.dropdown-menu').css('transform', 'translateX(-100%)')
+        $('.first-drop>.dropdown-menu').css('transform', 'translateX(100%)')
     });
 
     // scroll
