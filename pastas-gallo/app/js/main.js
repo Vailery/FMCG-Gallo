@@ -6,27 +6,61 @@ $(document).ready(function() {
         if ($('.search-input').css('display') == 'none') {
             $('.search-input')
                 .animate({ width: 'show' }, 500)
-                .focus()
+                .trigger('focus')
         } else {
             $('.search-input')
                 .animate({ width: 'hide' }, 500);
         }
     });
 
+    // burger menu
+    $('.navbar-toggler').on("click", function() {
+        if ($('.navbar-toggler').attr('aria-expanded') === 'true') {
+            $('.line-one').addClass('line-one-toggle')
+            $('.line-two').addClass('line-two-toggle')
+            $('.navbar').addClass('burger-menu')
+            $('.navbar').removeClass('navbar-small white-menu');
+        } else {
+            $('.line-one').removeClass('line-one-toggle')
+            $('.line-two').removeClass('line-two-toggle')
+            $('.navbar').removeClass('burger-menu')
+            $('.navbar').addClass('navbar-small white-menu')
+        }
+    });
+
+    $(window).resize(function() {
+        if ($(window).width() >= 1024) {
+            $('.navbar').removeClass('burger-menu')
+            $('.navbar-toggler')
+                .addClass('collapsed')
+                .attr('aria-expanded', 'false')
+                .first().click();
+        };
+    });
+
+    //dropdown toggle
+    $('.dropdown-toggle').on("click", function() {
+        if ($('.dropdown-second').hasClass('show')) {
+            $('.dropdown-toggle[aria-expanded=true]').addClass('drop-toggle')
+        } else {
+            $('.dropdown-toggle[aria-expanded=false]').removeClass('drop-toggle')
+        }
+    });
+
     // scroll
     $(window).on("scroll", function() {
         var scrolled = $(this).scrollTop();
-        if (scrolled > 1) {
+        if (scrolled > 10) {
             $('.navbar').addClass('navbar-small white-menu')
         }
-        if (scrolled <= 1) {
+        if (scrolled <= 10 || $('.navbar-toggler').attr('aria-expanded') === 'true') {
             $('.navbar').removeClass('navbar-small white-menu');
         }
     });
 
     // dropdown
     $('.dropdown-menu a.first-item').on("click", function(e) {
-        $(this).next('ul').toggle();
+        $(this).next('ul')
         e.stopPropagation();
         e.preventDefault();
     });
@@ -38,6 +72,8 @@ $(document).ready(function() {
         dots: true,
         easing: 'ease',
         pauseOnDotsHover: true,
+        pauseOnFocus: false,
+        pauseOnHover: false,
         touchThreshold: 3
     });
 
@@ -57,7 +93,7 @@ $(document).ready(function() {
         autoplaySpeed: 2000,
         waitForAnimate: false,
         variableWidth: true,
-        initialSlide: 18,
+        initialSlide: 8,
         responsive: [{
             breakpoint: 1023,
             settings: {
@@ -69,7 +105,8 @@ $(document).ready(function() {
     // for product slider
     $('.product-slider').on('afterChange', function(event, slick, currentSlide) {
         if (currentSlide == 19) {
-            $('.product-slider').slick('slickGoTo', 0)
+            $('.product-slider')
+                .slick('slickGoTo', 0)
                 .slick('slickSetOption', {
                     initialSlide: 0,
                     autoplay: true
@@ -110,24 +147,23 @@ const sr = ScrollReveal({
     duration: 2800
 })
 
-// sr.reveal(`.home__data, .home__social-link, .home__info, 
-//            .discover__container, 
-//            .experience__data, .experience__overlay,
-//            .place__card,
-//            .sponsor__content,
-//            .footer__data, .footer__rights`, {
-//     origin: 'top',
-//     interval: 100,
-// })
+sr.reveal(`.top-reveal`, {
+    origin: 'top',
+    interval: 100,
+})
 
-// sr.reveal(`.title`, {
-//     origin: 'right',
-//     interval: 100,
-// })
+sr.reveal(`.product-slider,
+            .bottom-reveal`, {
+    origin: 'bottom',
+})
 
-// sr.reveal(`.about__img-overlay, 
-//            .video__content,
-//            .subscribe__form`, {
-//     origin: 'right',
-//     interval: 100,
-// })
+sr.reveal(`.right-reveal`, {
+    origin: 'right',
+    interval: 100,
+})
+
+sr.reveal(`.left-reveal,
+            .bottom-slider`, {
+    origin: 'left',
+    interval: 100,
+})

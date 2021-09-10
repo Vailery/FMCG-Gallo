@@ -28,10 +28,14 @@
                 </button>
 
                 <div class="collapse navbar-collapse left-menu" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item home-block">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+
                         <li class="nav-item dropdown first-drop">
-                            <a class="nav-link" href="#" id="navbarDropdown">Product</a>
-                            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                            <a class="nav-link dropdown-toggle nav-drop" href="#" id="navbarDropdown">Product</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
                                     <a class="nav-link dropdown-toggle first-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pasta</a>
                                     <ul class="dropdown-menu dropdown-second" aria-labelledby="navbarDropdown">
@@ -155,7 +159,7 @@
                 </div>
 
                 <div class="collapse navbar-collapse right-menu" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Nutrition & tips</a>
                         </li>
@@ -168,8 +172,8 @@
                     <div class="search-menu d-flex">
                         <form class="d-flex search-form">
                             <button class="btn" id="search-button" type="button">
-                                <img class="btn__1" src="./images/img/btn-buscar-blanco.png" alt="search">
-                                <img class="btn__2" src="./images/img/btn_buscar_rojo.png" alt="search">
+                                <img class="btn__item-1" src="./images/img/btn-buscar-blanco.png" alt="search">
+                                <img class="btn__item-2" src="./images/img/btn_buscar_rojo.png" alt="search">
                             </button>
 
                             <input class="form-control search-input" type="search" placeholder="Search..." aria-label="Search">
@@ -204,8 +208,8 @@
         <!-- Product slider -->
         <section class="product-carousel">
             <div class="container-fluid">
-                <h3>Our</h3>
-                <h2>Products</h2>
+                <h3 class="top-reveal">Our</h3>
+                <h2 class="top-reveal">Products</h2>
 
                 <div class="slider product-slider">
                     <div class="card">
@@ -355,7 +359,7 @@
                     <div class="card">
                         <img src="./images/product/bodegon_singlutenfresca.png" class="card-img-top" alt="bodegon_singlutenfresca">
                         <div class="card-body">
-                            <h4 class="card-title">Gluten-free fresh pasta</h4>
+                            <h4 class="card-title">Gluten-free pasta</h4>
                             <a href="#" class="btn">View Range</a>
                         </div>
                     </div>
@@ -376,7 +380,7 @@
             <div class="container">
                 <div class="meal__info">
                     <div class="meal__info__text">
-                        <div class="meal__smoke">
+                        <div class="meal__smoke bottom-reveal">
                             <span style="--i:1;"></span>
                             <span style="--i:3;"></span>
                             <span style="--i:16;"></span>
@@ -399,13 +403,13 @@
                             <span style="--i:19;"></span>
                         </div>
 
-                        <h3>Chef Gallo</h3>
-                        <h2>Today,</h2>
-                        <p>Fresh pasta boletus, shitake and mozzarella</p>
-                        <a href="#">See Recipe</a>
+                        <h3 class="bottom-reveal">Chef Gallo</h3>
+                        <h2 class="bottom-reveal">Today,</h2>
+                        <p class="bottom-reveal">Fresh pasta boletus, shitake and mozzarella</p>
+                        <a href="#" class="bottom-reveal">See Recipe</a>
                     </div>
 
-                    <div class="meal__info__img">
+                    <div class="meal__info__img bottom-reveal">
                         <a href="#"><img src="./images/product/pasta-fresca-boletus-shitake-mozzarella.jpg" alt="meal"></a>
                     </div>
                 </div>
@@ -415,9 +419,9 @@
         <!-- Bottom slider -->
         <section class="bottom-carousel">
             <div class="container-fluid">
-                <h3>Cuisine</h3>
-                <h2>Always a success at home</h2>
-                <a href="#">View all recipes <span>></span></a>
+                <h3 class="bottom-reveal">Cuisine</h3>
+                <h2 class="bottom-reveal">Always a success at home</h2>
+                <a href="#" class="left-reveal">View all recipes <span>></span></a>
 
                 <div class="slider bottom-slider">
                     <div class="card">
@@ -535,21 +539,21 @@
             <div class="container-fluid">
                 <div class="quality-info">
                     <div class="info">
-                        <div class="info__image">
+                        <div class="info__image left-reveal">
                             <img src="./images/img/home_espiga.png" alt="ear">
                         </div>
 
                         <div class="info__text">
-                            <h3>Quality</h3>
-                            <h2>Gallo</h2>
-                            <p>Since its inception, in the forties, Gallo's is a story of innovation and pursuit of excellence.</p>
-                            <a href="#">learn more</a>
+                            <h3 class="top-reveal">Quality</h3>
+                            <h2 class="top-reveal">Gallo</h2>
+                            <p class="bottom-reveal">Since its inception, in the forties, Gallo's is a story of innovation and pursuit of excellence.</p>
+                            <a href="#" class="bottom-reveal">learn more</a>
                         </div>
                     </div>
 
                     <div class="picture">
                         <div class="picture__info">
-                            <div class="picture__info__content">
+                            <div class="picture__info__content right-reveal">
                                 <p>Pasta made our way, a product of our time and for everyone</p>
                                 <a href="#">learn more</a>
                             </div>
