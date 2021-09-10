@@ -382,8 +382,35 @@
             }
             .navbar-nav {
                 align-items: flex-start;
+                .first-drop {
+                    position: initial;
+                }
                 .first-drop>.dropdown-menu {
-                    display: none;
+                    position: absolute;
+                    top: 25%;
+                    left: 0;
+                    height: 100%;
+                    max-height: 100vh;
+                    width: 100vw;
+                    margin-top: 0;
+                    padding-left: 50px;
+                    transform: translateX(-100%);
+                }
+                .go-back {
+                    &::before {
+                        content: "";
+                        background-image: url('../images/img/btn-flechadizquierda-rojo.png');
+                        background-size: cover;
+                        background-position: center;
+                        display: block;
+                        width: 12px;
+                        height: 12px;
+                        background-color: transparent;
+                        position: absolute;
+                        left: 20px;
+                        top: 45px;
+                        transform: translateY(-50%);
+                    }
                 }
                 .nav-item.home-block {
                     display: block;
@@ -392,6 +419,11 @@
                     margin-bottom: 15px;
                     .nav-link {
                         position: relative;
+                        color: #000;
+                        font-size: 20px;
+                        padding: 7px 0;
+                    }
+                    .red-block {
                         color: #000;
                         font-size: 20px;
                         padding: 7px 0;
@@ -742,7 +774,7 @@
     }
 }
 
-// media queries for meal section
+// media queries for product slider
 @media (max-width: 1023px) {
     .product-carousel {
         background-image: url('../images/img/fondo_detalleproducto_mobile.jpg');
@@ -856,6 +888,7 @@
                 text-transform: uppercase;
                 transition: .2s ease-in-out;
                 display: block;
+                border-radius: 0;
             }
         }
         &__img {
@@ -1164,6 +1197,7 @@
                 text-transform: uppercase;
                 transition: .2s ease-in-out;
                 display: block;
+                border-radius: 0;
             }
         }
     }
@@ -1214,6 +1248,7 @@
                     position: absolute;
                     bottom: -15px;
                     display: none;
+                    border-radius: 0;
                 }
             }
         }
